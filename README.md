@@ -5,7 +5,7 @@
 ```bash
 cd <flask_venv>/app
 
-celery -A app worker --loglevel=info
+celery -A app worker --loglevel=info -E -P threads
 ```
 # Celery CLI args
 ```
