@@ -15,7 +15,8 @@ from ..blueprints import (
     AdminSwitchStatus,
     AdminSimulateLatency,
     GetMediaEndpoint,
-    GetAllMedia
+    GetAllMedia,
+    frontend_blueprint
 )
 
 
@@ -95,3 +96,5 @@ def init_app(app):
         GetAllMedia, '/')
     app.register_blueprint(client_get_all_endpoint_bp,
                            url_prefix='/c.get-list')
+
+    app.register_blueprint(frontend_blueprint)
